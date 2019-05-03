@@ -1,3 +1,3 @@
-module PreferencesController
+module PreferencesHelper
 
 end
