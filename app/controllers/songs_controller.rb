@@ -84,14 +84,6 @@ class SongsController < ApplicationController
     end
   end
 
-  def sort_artists(preference, artists)
-    if preference.artist_sort_order == "DESC"
-      artists.sort_by { |artist| -artist.name }
-    else
-      preference.artists.sort_by {|artist| artist.name }
-    end
-  end
-
   def song_params
     params.require(:song).permit(:title, :artist_name, :artist_id)
   end
