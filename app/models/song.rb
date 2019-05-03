@@ -1,6 +1,6 @@
 class Song < ActiveRecord::Base
   validates :artist_id, :allow_nil => true
-  belongs_to :artist
+  belongs_to :artist, :presence => false
 
   def artist_name
     self.try(:artist).try(:name)
