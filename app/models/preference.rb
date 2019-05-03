@@ -15,5 +15,5 @@ class Preference < ActiveRecord::Base
       self.songs.sort_by {|song| song.name }
     end
   end
-  
+
 end
