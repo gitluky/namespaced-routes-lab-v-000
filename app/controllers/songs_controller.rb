@@ -9,7 +9,7 @@ class SongsController < ApplicationController
         @songs = sort_songs(preference, @artist.songs)
       end
     else
-      @songs = Song.all
+      @songs = sort_songs(preference, Song.all)
     end
   end
 
