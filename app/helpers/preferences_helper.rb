@@ -1,5 +1,5 @@
 module PreferencesHelper
-  def sort_artist(preference, artists)
+  def sort_artists(preference, artists)
     if preference.artist_sort_order == "DESC"
       artists.sort_by { |artist| -artist.name }
     else
@@ -7,7 +7,7 @@ module PreferencesHelper
     end
   end
 
-  def sort_song(preference, songs)
+  def sort_songs(preference, songs)
     if preference.song_sort_order == "DESC"
       songs.sort_by { |song| -song.name }
     else
