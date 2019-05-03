@@ -1,5 +1,5 @@
 class Song < ActiveRecord::Base
-  validates :artist, :allow_nil => true
+  validates :artist_if, :allow_nil => true
   belongs_to :artist
 
   def artist_name
