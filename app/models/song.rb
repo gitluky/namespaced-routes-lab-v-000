@@ -11,4 +11,13 @@ class Song < ActiveRecord::Base
       self.artist = artist
     end
   end
+
+  def sort_songs(preference, songs)
+    if preference.song_sort_order == "DESC"
+      songs.sort_by { |song| -song.name }
+    else
+      preference.songs.sort_by {|song| song.name }
+    end
+  end
+
 end
