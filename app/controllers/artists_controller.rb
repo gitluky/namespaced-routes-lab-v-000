@@ -3,8 +3,8 @@ class ArtistsController < ApplicationController
     preference = Preference.last
     @artists = Artist.all
     if !preference.nil?
-        @artists = sort_artists(preference, @artist)
-      end
+      @artists = sort_artists(preference, @artist)
+    end
   end
 
   def show
