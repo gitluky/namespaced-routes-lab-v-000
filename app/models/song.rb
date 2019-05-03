@@ -1,5 +1,4 @@
 class Song < ActiveRecord::Base
-  validates :artist_id, :presence => false
   belongs_to :artist
 
   def artist_name
